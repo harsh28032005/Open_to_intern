@@ -1,0 +1,28 @@
+{
+  "name": "open_to_intern",
+  "version": "1.0.0",
+  "description": "This is a new open_to_intern project.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harsh28032005/Open_to_intern.git"
+  },
+  "author": "Harsh Gautam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harsh28032005/Open_to_intern/issues"
+  },
+  "homepage": "https://github.com/harsh28032005/Open_to_intern#readme",
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.17.0",
+    "nodemon": "^3.1.10"
+  }
+}
