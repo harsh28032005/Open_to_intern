@@ -22,13 +22,13 @@
 
 ### POST /interns
 - Create a document for an intern. 
-- Also save the collegeId along with the document. Your request body contains the following fields - { name, mobile, email, collegeName}
+- Also save the collegeId along with the document. Your request body contains the following fields - { name, mobile, email, college_name}
 - Return HTTP status 201 on a succesful document creation. Also return the document. The response should be a JSON object like [this](#successful-response-structure) 
 
 - Return HTTP status 400 for an invalid request with a response body like [this](#error-response-structure)
 
 ### GET /collegeDetails
-- Returns the college details for the requested college (Expect a query parameter by the name `collegeName`. This is an abbreviated college name. For example `iith`)
+- Returns the college details for the requested college (Expect a query parameter by the name `college_name`. This is an abbreviated college name. For example `iith`)
 - Returns the list of all interns who have applied for internship at this college.
 
 
@@ -68,19 +68,19 @@ Refer below sample
 ```yaml
 {
     "name" : "iith",
-    "fullName" : "Indian Institute of Technology, Hyderabad",
-    "logoLink" : "https://functionup.s3.ap-south-1.amazonaws.com/colleges/iith.png",
-    "isDeleted" : false
+    "full_name" : "Indian Institute of Technology, Hyderabad",
+    "logo_link" : "https://functionup.s3.ap-south-1.amazonaws.com/colleges/iith.png",
+    "is_deleted" : false
 }
 ```
 #### Intern
 ```yaml
    {
-    "isDeleted" : false,
+    "is_deleted" : false,
     "name" : "Jane Does",
     "email" : "jane.doe@iith.in",
     "mobile" : "90000900000",
-    "collegeId" : ObjectId("888771129c9ea621dc7f5e3b")
+    "college_id" : ObjectId("888771129c9ea621dc7f5e3b")
 }
 ```
 ## Response samples
@@ -90,8 +90,8 @@ Refer below sample
 {
   "data": {
     "name": "xyz",
-    "fullName": "Some Institute of Engineering and Technology",
-    "logoLink": "some public s3 link for a college logo",
+    "full_name": "Some Institute of Engineering and Technology",
+    "logo_link": "some public s3 link for a college logo",
     "interns": [
       {
         "_id": "123a47301a53ecaeea02be59",

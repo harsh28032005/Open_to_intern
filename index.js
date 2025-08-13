@@ -2,11 +2,13 @@ import express from "express";
 import mongoose from "mongoose";
 import "dotenv/config";
 import college_route from "./routes/college.js";
+import intern_route from "./routes/intern.js";
 
 const app = express();
 
 app.use(express.json());
 app.use("", college_route);
+app.use("", intern_route);
 
 mongoose
   .connect(process.env.Mongo_Url)
